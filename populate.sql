@@ -5,18 +5,18 @@ VALUES(2, 'Bob345','123qwert','bobwilsom@gmail.com', 'Bob', 'Wilsom', NOW());
 INSERT INTO Users (id, login, password, email, lastname, firstname, created)
 VALUES(3, 'Nick324','1234qwer','nicktramp@gmail.com', 'Nick', 'Tramp', NOW());
 
-INSERT INTO Reposytoty (id, name, description, created, countofprojects, user_id)
+INSERT INTO Text_Data (id, name, description, created, countofcommandlist, user_id)
 VALUES (1, 'Population of reptile','Research population reptile', NOW(), 1, 3);
-INSERT INTO Reposytoty (id, name, description, created, countofprojects, user_id)
+INSERT INTO Text_Data (id, name, description, created, countofcommandlist, user_id)
 VALUES (2, 'Parsing fecebook','Methods for parsing page of fecebook', NOW(), 3, 1);
-INSERT INTO Reposytoty (id, name, description, created, countofprojects, user_id)
+INSERT INTO Text_Data (id, name, description, created, countofcommandlist, user_id)
 VALUES (3, 'Data maining','Algoritms for maining', NOW(), 2, 1);
 
-INSERT INTO Project (id, name, description, created, CountOfFiles, reposytoty_ID)
+INSERT INTO Project (id, name, description, created, CountOfFiles, text_data_ID)
 VALUES (1, 'Population','Research population reptile in Africa', NOW(), 4, 1);
-INSERT INTO Project (id, name, description, created, CountOfFiles, reposytoty_ID)
+INSERT INTO Project (id, name, description, created, CountOfFiles, text_data_ID)
 VALUES (2, 'Parsing news line','Method parsing news line of fecebook', NOW(), 3, 2);
-INSERT INTO Project (id, name, description, created, CountOfFiles, reposytoty_ID)
+INSERT INTO Project (id, name, description, created, CountOfFiles, text_data_ID)
 VALUES (3, 'Parsing single page','Method parsing single page of fecebook', NOW(), 5, 2);
 
 INSERT INTO Files (id, name, File_text, Expansion, versions, created, rating, project_ID)
@@ -27,6 +27,6 @@ INSERT INTO Files (id, name, file_text, Expansion, versions, created, rating, pr
 VALUES (3, 'main','import xml...', '.py', '1.0.1', NOW(), 0.02, 2);
 
 select * from users;
-select * from reposytoty;
+select * from text_data;
 select * from project;
 select * from files;

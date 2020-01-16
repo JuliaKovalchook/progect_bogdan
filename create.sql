@@ -8,18 +8,7 @@ CREATE TABLE Users (
 	Created timestamp
 );
 
-
-CREATE TABLE Users (
-	ID SERIAL PRIMARY KEY,
-	voice_body varchar(30) UNIQUE NOT NULL,
-	Password varchar(50) NOT NULL,
-	Email varchar(50) UNIQUE NOT NULL,
-	voice_emotion_date varchar(30),
-	Firstname varchar(30),
-	Created timestamp
-);
-
-CREATE TABLE Reposytoty ( 
+CREATE TABLE Text_Data ( 
 	ID SERIAL PRIMARY KEY,
 	Name varchar(30) NOT NULL,
 	Description text, 
@@ -37,9 +26,9 @@ CREATE TABLE Project (
 	Description text, 
 	Created timestamp,
 	CountOfFiles int NOT NULL DEFAULT 0,
-	Reposytoty_ID int,
-	CONSTRAINT FK_Reposytoty_ID FOREIGN KEY (Reposytoty_ID)
-      REFERENCES Reposytoty (ID),
+	Text_Data_ID int,
+	CONSTRAINT FK_Text_Data_ID FOREIGN KEY (Text_Data_ID)
+      REFERENCES Text_Data (ID),
 	CONSTRAINT Check_Count_File CHECK (CountOfFiles >= 0)
 );
 
