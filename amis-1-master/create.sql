@@ -8,6 +8,17 @@ CREATE TABLE Users (
 	Created timestamp
 );
 
+
+CREATE TABLE Users (
+	ID SERIAL PRIMARY KEY,
+	voice_body varchar(30) UNIQUE NOT NULL,
+	Password varchar(50) NOT NULL,
+	Email varchar(50) UNIQUE NOT NULL,
+	voice_emotion_date varchar(30),
+	Firstname varchar(30),
+	Created timestamp
+);
+
 CREATE TABLE Reposytoty ( 
 	ID SERIAL PRIMARY KEY,
 	Name varchar(30) NOT NULL,

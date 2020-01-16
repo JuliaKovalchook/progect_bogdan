@@ -25,13 +25,10 @@ app.secret_key = 'key'
 
 ENV = 'prod'
 
-if ENV == 'dev':
-    app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1111@localhost/Joseph'
-else:
-    app.debug = False
-    app.config[
-        'SQLALCHEMY_DATABASE_URI'] = 'postgres://qexacebxlyoflv:7f1848d692d8a690603199584eaf0f697e63459f365c69074da6ec8ca508e9fc@ec2-107-21-126-201.compute-1.amazonaws.com:5432/ddj3djvlda7rga'
+
+app.debug = False
+app.config[
+        'SQLALCHEMY_DATABASE_URI'] = 'postgres://ilhgwrquekcgug:b3822fc1814c8375bce1324f290c77a53a255b222ed426c6bb4e9c2823d757b0@ec2-174-129-33-88.compute-1.amazonaws.com:5432/d4tkben8k1gdbh'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
